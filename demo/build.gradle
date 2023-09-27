@@ -1,5 +1,15 @@
 //add everything here
 
+plugins{
+    id 'maven-publish'
+}
+group 'Stage2.module1.grandle'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
 test {
     useJUnitPlatform()
 }
