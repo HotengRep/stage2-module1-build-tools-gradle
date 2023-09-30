@@ -5,6 +5,13 @@ import com.epam.utils.StringUtils;
 
 public class Utils {
     public static boolean isAllPositiveNumbers(List<String> args) {
-       return args.stream().allMatch(StringUtils::isPositiveNumber);
+        try {
+            return args.stream().allMatch(StringUtils::isPositiveNumber);
+        }
+        catch (NullPointerException exception)
+        {
+            return  false;
+        }
+
     }
 }
