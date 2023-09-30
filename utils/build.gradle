@@ -1,12 +1,12 @@
 
 plugins {
     // id for library
-    id('java-library')
+    id('java')
     id('maven-publish')
 }
 
 java {
-    sourceCompatibility = '20.0.1'
+    sourceCompatibility = "1.8"
 }
 
 repositories {
@@ -16,16 +16,18 @@ repositories {
 publishing {
     publications {
         maven(MavenPublication) {
-            from components.java
-            groupId 'Stage2.module1.grandle'
-            artifactId 'util'
+            groupId 'stage2'
+            artifactId =  'utils'
             version ('1.0 - SNAPSHOT')
+            from components.java
+
         }
     }
 }
 //add Apache Apache Commons Lang 3.10 (or higher) dependency
 dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
+
 }
 
 
